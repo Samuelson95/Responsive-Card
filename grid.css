@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: open-sans, sans-serif;
+    font-size: 16px;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.month-container {
+    max-width: 960px;
+    width: 90%;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto 1fr auto;
+
+    grid-template-areas: 
+    "january january"
+    "febuary febuary"
+    "march april"
+    "may may";
+}
+
+
+.header {
+   grid-area: january;
+   background-color: darkblue;
+   color: white;
+   padding: 20px;
+   text-align: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.nav {
+    grid-area: febuary;
+    background-color: darkcyan;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+ .main {
+    grid-area: march;
+    background-color:steelblue;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+ .aside {
+    grid-area: april;
+    background-color: slateblue;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+ .footer {
+    grid-area: may;
+    background-color: darkblue;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+
+ @media (max-width: 768px) {
+    .month-container {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "january"
+        "march"
+        "febuary"
+        "april"
+        "may";
+         grid-template-rows: auto 1fr auto auto;
+
+    }
+ }
